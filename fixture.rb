@@ -1,6 +1,6 @@
 class Fixture
 
-  attr_reader :stage, :date, :time, :status, :final_score, :hometeam, :awayteam,
+  attr_reader :stage, :date, :time, :status, :final_score, :hometeam, :awayteam
 
   def initialize(attributes = {})
     @stage = attributes[:stage]
@@ -13,12 +13,12 @@ class Fixture
   end
 
   def set_score(score)
-    @status == "Done" ? @final_score = score : puts "Error"
+    @status == "Done" ? (@final_score = score) : (return puts "Error")
     # Handle an error here instead
   end
 
   def end_game
-    @status = "Done"
+    @status == "Not started" ? (@status = "Done") : (return puts "The game is already started!")
   end
 
   def set_home_team(team)
