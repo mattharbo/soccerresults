@@ -14,11 +14,17 @@ mbappe_attributes = {
   name: "MBappé"
 }
 
+fcmpsg_attributes = {
+  stage = 4
+  date = "8.30.2019"
+  time = "21.00"
+}
+
 # ----------------------------
 
 psg = Team.new(psg_attributes)
 mbappe = Player.new(mbappe_attributes)
-mbappe.add_team(psg)
+mbappe.change_team(psg)
 
 # ----------------------------
 

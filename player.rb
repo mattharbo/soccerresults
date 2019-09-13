@@ -2,12 +2,12 @@ class Player
 
   attr_reader :name, :surname, :team
 
-  def initialize(attribute = {})
-    @name = attribute[:name]
-    @surname = attribute[:surname]
+  def initialize(attributes = {})
+    @name = attributes[:name]
+    @surname = attributes[:surname]
   end
 
-  def add_team(team)
+  def change_team(team)
     @team = team
   end
 

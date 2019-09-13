@@ -2,10 +2,10 @@ class Team
 
   attr_reader :teamname, :acronym, :city
 
-  def initialize(attribute = {})
-    @teamname = attribute[:teamname]
-    @acronym = attribute[:acronym]
-    @city = attribute[:city]
+  def initialize(attributes = {})
+    @teamname = attributes[:teamname]
+    @acronym = attributes[:acronym]
+    @city = attributes[:city]
   end
 
 end
