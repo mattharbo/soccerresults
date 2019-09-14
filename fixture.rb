@@ -19,6 +19,7 @@ class Fixture
 
   def end_game
     @status == "Not started" ? (@status = "Done") : (return puts "The game is already started!")
+    # Handle an error here instead
   end
 
   def set_home_team(team)
