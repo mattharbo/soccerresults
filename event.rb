@@ -1,21 +1,26 @@
 class Event
 
-  attr_reader :game, :type, :player, :team, :minute, :second_player, :xcoord, :ycoord
+  attr_reader :game, :type, :player, :team, :minute, :assistance, :player_out, :xcoord, :ycoord
 
-  def initialize(game, type, player, team, attributes = {}, player2)
+  def initialize(game, type, player, team, player2)
     @game = game
     @type = type
     @player = player
     @team = team
-    @minute = attributes[:minute]
 
-    if @type.name == "Goal"
-      @second_player = player2
-      @xcoord = attributes[:xcoord]
-      @ycoord = attributes[:ycoord]
-    else
-      @second_player = player2
+    case @type.name
+    when "Goal"
+      @assistance = player2
+    when "Substitution"
+      @player_out = player2
     end
+
+  end
+
+  def define_event_settings(attributes = {})
+    @minute = attributes[:minute]
+    @xcoord = attributes[:xcoord]
+    @ycoord = attributes[:ycoord]
   end
 
 end

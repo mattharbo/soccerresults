@@ -1,15 +1,18 @@
 class Fixture
 
-  attr_reader :stage, :date, :time, :status, :final_score, :hometeam, :awayteam
+  attr_reader :stage, :date, :time, :status, :hometeam, :awayteam, :final_score
 
-  def initialize(attributes = {})
+  def initialize(stadium, season)
+    @status = "Not started"
+    @final_score = nil
+    @stadium = stadium
+    @season = season
+  end
+
+  def define_game_settings(attributes = {})
     @stage = attributes[:stage]
     @date = attributes[:date]
     @time = attributes[:time]
-    @status = "Not started"
-    @final_score = nil
-    # @stadium = attributes[:stadium]
-    # @season = attributes[:season]
   end
 
   def set_score(score)
