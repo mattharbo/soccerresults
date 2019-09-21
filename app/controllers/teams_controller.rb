@@ -1,123 +1,26 @@
 class TeamsController < ApplicationController
 
-  # ------------------------
-  # Temporary seeds of teams
-  # ------------------------
-  HASHOFFRENCHTEAMS = {
-    1 => {
-      name: "Amiens SC",
-      acronym: "ASC",
-      city: "Amiens"
-    },
-    2 => {
-      name: "SCO Angers",
-      acronym: "SCO",
-      city: "Angers"
-    },
-    3 => {
-      name: "FC Girondins de Bordeaux",
-      acronym: "FCGB",
-      city: "Bordeaux"
-    },
-    4 => {
-      name: "Stade Brestois",
-      acronym: "SB29",
-      city: "Brest"
-    },
-    5 => {
-      name: "Dijon FCO",
-      acronym: "DFCO",
-      city: "Dijon"
-    },
-    6 => {
-      name: "Lille OSC",
-      acronym: "LOSC",
-      city: "Lille"
-    },
-    7 => {
-      name: "Olympique Lyonnais",
-      acronym: "OL",
-      city: "Lyon"
-    },
-    8 => {
-      name: "Olympique de Marseille",
-      acronym: "OM",
-      city: "Marseille"
-    },
-    9 => {
-      name: "FC Metz",
-      acronym: "FCM",
-      city: "Metz"
-    },
-    10 => {
-      name: "AS Monaco FC",
-      acronym: "ASMFC",
-      city: "Monaco"
-    },
-    11 => {
-      name: "Montpellier Hérault FC",
-      acronym: "MHFC",
-      city: "Montpellier"
-    },
-    12 => {
-      name: "FC Nantes Atlantique",
-      acronym: "FCNA",
-      city: "Nantes"
-    },
-    13 => {
-      name: "OGC Nice",
-      acronym: "OGCN",
-      city: "Nice"
-    },
-    14 => {
-      name: "Nîmes Olympique",
-      acronym: "NO",
-      city: "Nîmes"
-    },
-    15 => {
-      name: "Paris Saint-Germain",
-      acronym: "PSG",
-      city: "Paris"
-    },
-    16 => {
-      name: "Stade de Reims",
-      acronym: "SdR",
-      city: "Reims"
-    },
-    17 => {
-      name: "Stade Rennais",
-      acronym: "SR",
-      city: "Rennes"
-    },
-    18 => {
-      name: "AS Saint-Etienne",
-      acronym: "ASSE",
-      city: "Saint-Etienne"
-    },
-    19 => {
-      name: "Racing Club de Strasbourg",
-      acronym: "RCS",
-      city: "Strasbourg"
-    },
-    20 => {
-      name: "Toulouse FC",
-      acronym: "TFC",
-      city: "Toulouse"
-    }
-  }
-
-  # ------------------------
-
   def index
     @teams = HASHOFFRENCHTEAMS
   end
 
-  def create
-
-  end
-
   def show
     @team = HASHOFFRENCHTEAMS[params[:id].to_i]
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
 end
