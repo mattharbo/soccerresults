@@ -1,0 +1,9 @@
+<p>
+  <%= link_to "Home", home_path %> &nbsp;| 
+  <%= link_to "Back to list", teams_path %>
+</p>
+
+<h1><%= @team[:name] %></h1>
+<h3><%= @team[:city] %></h3>
+
+(<%= @team[:acronym] %>)
