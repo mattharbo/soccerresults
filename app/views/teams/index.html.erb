@@ -6,9 +6,9 @@
 <h2>List of all the teams:</h2>
 
 <ul>
-  <% @teams.each do |id, team| %>
+  <% @teams.each do |team| %>
     <li>
-      <%= link_to team[:name], team_path(id) %>
+      <%= link_to team.team_name, team_path(team.id) %>
     </li>
   <% end %>
 </ul>

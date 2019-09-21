@@ -1,11 +1,11 @@
 class TeamsController < ApplicationController
 
   def index
-    @teams = HASHOFFRENCHTEAMS
+    @teams = Team.all
   end
 
   def show
-    @team = HASHOFFRENCHTEAMS[params[:id].to_i]
+    @team = Team.find(params[:id])
   end
 
   def new

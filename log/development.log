@@ -1647,3 +1647,318 @@ Migrating to CreateTeams (20190921150324)
   [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
   ↳ db/seeds.rb:113
   [1m[36mTeam Load (3.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/teams" for ::1 at 2019-09-21 18:22:34 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+     8: <ul>
+     9:   <% @teams.each do |id, team| %>
+    10:     <li>
+    11:       <%= link_to team[:name], team_path(id) %>
+    12:     </li>
+    13:   <% end %>
+    14: </ul>
+  
+app/views/teams/index.html.erb:11:in `block in _app_views_teams_index_html_erb___2566448862681352999_70225608979320'
+app/views/teams/index.html.erb:9:in `_app_views_teams_index_html_erb___2566448862681352999_70225608979320'
+Started GET "/teams" for ::1 at 2019-09-21 18:23:19 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:23:33 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:23:42 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:23:52 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:24:34 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/teams/index.html.erb:8
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:12
+  Rendered teams/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `team_name' for nil:NilClass):
+    11: <ul>
+    12:   <% @teams.each do |id, team| %>
+    13:     <li>
+    14:       <%= link_to team.team_name, team_path(id) %>
+    15:     </li>
+    16:   <% end %>
+    17: </ul>
+  
+app/views/teams/index.html.erb:14:in `block in _app_views_teams_index_html_erb___2566448862681352999_70225632428180'
+app/views/teams/index.html.erb:12:in `_app_views_teams_index_html_erb___2566448862681352999_70225632428180'
+Started GET "/teams" for ::1 at 2019-09-21 18:24:49 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/teams/index.html.erb:8
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:12
+  Rendered teams/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `team_name' for nil:NilClass):
+    11: <ul>
+    12:   <% @teams.each do |id, team| %>
+    13:     <li>
+    14:       <%= link_to team.team_name, team_path(team.id) %>
+    15:     </li>
+    16:   <% end %>
+    17: </ul>
+  
+app/views/teams/index.html.erb:14:in `block in _app_views_teams_index_html_erb___2566448862681352999_70225634196300'
+app/views/teams/index.html.erb:12:in `_app_views_teams_index_html_erb___2566448862681352999_70225634196300'
+Started GET "/teams" for ::1 at 2019-09-21 18:25:19 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/teams/index.html.erb:8
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:12
+  Rendered teams/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `acronym' for nil:NilClass):
+    11: <ul>
+    12:   <% @teams.each do |id, team| %>
+    13:     <li>
+    14:       <%= link_to team.acronym, team_path(team.id) %>
+    15:     </li>
+    16:   <% end %>
+    17: </ul>
+  
+app/views/teams/index.html.erb:14:in `block in _app_views_teams_index_html_erb___2566448862681352999_70225656141360'
+app/views/teams/index.html.erb:12:in `_app_views_teams_index_html_erb___2566448862681352999_70225656141360'
+Started GET "/teams" for ::1 at 2019-09-21 18:25:44 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/teams/index.html.erb:8
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:12
+  Rendered teams/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:25:54 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teams/6" for ::1 at 2019-09-21 18:25:56 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:25:58 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams/10" for ::1 at 2019-09-21 18:26:36 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 15.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teams/12" for ::1 at 2019-09-21 18:26:40 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:26:42 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams/9" for ::1 at 2019-09-21 18:27:00 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:27:02 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/6" for ::1 at 2019-09-21 18:27:06 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-09-21 18:27:08 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:27:09 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams/13" for ::1 at 2019-09-21 18:27:11 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:27:13 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/18" for ::1 at 2019-09-21 18:27:14 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:27:16 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/20" for ::1 at 2019-09-21 18:27:17 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:27:18 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams/1" for ::1 at 2019-09-21 18:27:19 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-21 18:27:19 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
