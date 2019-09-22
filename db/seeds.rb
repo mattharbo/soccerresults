@@ -109,6 +109,113 @@ HASHOFFRENCHTEAMS = {
   }
 }
 
-HASHOFFRENCHTEAMS.each do |id, team|
-  Team.create(team_name: team[:name], acronym: team[:acronym], city: team[:city])
-end
+FRENCHSTADIA = {
+  1 => {
+    name: "Stade de la Licorne",
+    capacity: 12097,
+    city: "Amiens"
+  },
+  2 => {
+    name: "Stade Raymond Kopa",
+    capacity: 18752,
+    city: "Angers"
+  },
+  3 => {
+    name: "Matmut Atlantique",
+    capacity: 42115,
+    city: "Bordeaux"
+  },
+  4 => {
+    name: "Stade Francis-Le Blé",
+    capacity: 16000,
+    city: "Brest"
+  },
+  5 => {
+    name: "Stade Gaston-Gerard",
+    capacity: 15995,
+    city: "Dijon"
+  },
+  6 => {
+    name: "Stade Pierre Mauroy",
+    capacity: 50186,
+    city: "Lille"
+  },
+  7 => {
+    name: "Parc Olympique Lyonnais",
+    capacity: 59186,
+    city: "Lyon"
+  },
+  8 => {
+    name: "Orange Vélodrome",
+    capacity: 67394,
+    city: "Marseille"
+  },
+  9 => {
+    name: "Stade Saint-Symphorien",
+    capacity: 25636,
+    city: "Metz"
+  },
+  10 => {
+    name: "Stade Louis II",
+    capacity: 18523,
+    city: "Monaco"
+  },
+  11 => {
+    name: "Stade de la Mosson",
+    capacity: 32900,
+    city: "Montpellier"
+  },
+  12 => {
+    name: "Stade de la Beaujoire",
+    capacity: 37473,
+    city: "Nantes"
+  },
+  13 => {
+    name: "Allianz Riviera - Nice Stadium",
+    capacity: 35624,
+    city: "Nice"
+  },
+  14 => {
+    name: "Stade des Costières",
+    capacity: 18364,
+    city: "Nîmes"
+  },
+  15 => {
+    name: "Le Parc des Princes",
+    capacity: 47929,
+    city: "Paris"
+  },
+  16 => {
+    name: "Stade Auguste-Delaune",
+    capacity: 21127,
+    city: "Reims"
+  },
+  17 => {
+    name: "Roazhon Park",
+    capacity: 29778,
+    city: "Rennes"
+  },
+  18 => {
+    name: "Stade Geoffroy-Guichard",
+    capacity: 41965,
+    city: "Saint-Etienne"
+  },
+  19 => {
+    name: "Stade de la Meinau",
+    capacity: 29320,
+    city: "Strasbourg"
+  },
+  20 => {
+    name: "Stadium de Toulouse",
+    capacity: 33150,
+    city: "Toulouse"
+  }
+}
+
+# HASHOFFRENCHTEAMS.each do |id, team|
+#   Team.create(team_name: team[:name], acronym: team[:acronym], city: team[:city])
+# end
+
+# FRENCHSTADIA.each do |id, stadium|
+#   Stadium.create(name: stadium[:name], town: stadium[:city], capacity: stadium[:capacity])
+# end

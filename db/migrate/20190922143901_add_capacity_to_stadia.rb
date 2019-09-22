@@ -1,0 +1,5 @@
+class AddCapacityToStadia < ActiveRecord::Migration[5.2]
+  def change
+    add_column :stadia, :capacity, :integer
+  end
+end
