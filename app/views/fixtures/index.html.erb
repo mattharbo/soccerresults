@@ -1,0 +1,12 @@
+<h1>Fixtures#index</h1>
+
+<% @fixtures.each do |fixture| %>
+  <b>Stage <%= fixture.stage %>:</b>
+  <%= fixture.home_team.acronym %>
+  <b>
+    <%= fixture.final_score %>
+  </b>
+  <%= fixture.away_team.acronym %>
+  @<%= fixture.stadium.name %>
+  <br>
+<% end %>
