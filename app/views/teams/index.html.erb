@@ -1,0 +1,14 @@
+<p>
+  <%= link_to "Home", home_path %>
+</p>
+
+
+<h2>List of all the teams:</h2>
+
+<ul>
+  <% @teams.each do |team| %>
+    <li>
+      <%= link_to team.team_name, team_path(team.id) %>
+    </li>
+  <% end %>
+</ul>
