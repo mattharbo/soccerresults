@@ -2843,3 +2843,99 @@ Migrating to AddCapacityToStadia (20190922143901)
   ↳ db/seeds.rb:220
   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
   ↳ db/seeds.rb:220
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateFixtures (20190922151912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "fixtures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "date" date, "time" time, "team_id" integer, "final_score" varchar, "stadium_id" integer, "season_id" integer, "stage" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f2a0ab1c3e"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+, CONSTRAINT "fk_rails_f2a0ab1c3e"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+, CONSTRAINT "fk_rails_73acb000e1"
+FOREIGN KEY ("stadium_id")
+  REFERENCES "stadia" ("id")
+, CONSTRAINT "fk_rails_140b10c8ba"
+FOREIGN KEY ("season_id")
+  REFERENCES "seasons" ("id")
+)[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_team_id" ON "fixtures" ("team_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateFixtures (20190922151912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "fixtures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "date" date, "time" time, "team_id" integer, "home_team_id_id" integer, "away_team_id_id" integer, "final_score" varchar, "stadium_id" integer, "season_id" integer, "stage" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f2a0ab1c3e"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+, CONSTRAINT "fk_rails_1c4d87349f"
+FOREIGN KEY ("home_team_id_id")
+  REFERENCES "home_team_ids" ("id")
+, CONSTRAINT "fk_rails_f2a0ab1c3e"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+, CONSTRAINT "fk_rails_5be58d8d54"
+FOREIGN KEY ("away_team_id_id")
+  REFERENCES "away_team_ids" ("id")
+, CONSTRAINT "fk_rails_73acb000e1"
+FOREIGN KEY ("stadium_id")
+  REFERENCES "stadia" ("id")
+, CONSTRAINT "fk_rails_140b10c8ba"
+FOREIGN KEY ("season_id")
+  REFERENCES "seasons" ("id")
+)[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_team_id" ON "fixtures" ("team_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_home_team_id_id" ON "fixtures" ("home_team_id_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (5.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateFixtures (20190922151912)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateFixtures (20190922151912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "fixtures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "date" date, "time" time, "home_team_id" integer, "away_team_id" integer, "final_score" varchar, "stadium_id" integer, "season_id" integer, "stage" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_73acb000e1"
+FOREIGN KEY ("stadium_id")
+  REFERENCES "stadia" ("id")
+, CONSTRAINT "fk_rails_140b10c8ba"
+FOREIGN KEY ("season_id")
+  REFERENCES "seasons" ("id")
+)[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_home_team_id" ON "fixtures" ("home_team_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_away_team_id" ON "fixtures" ("away_team_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_stadium_id" ON "fixtures" ("stadium_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_fixtures_on_season_id" ON "fixtures" ("season_id")[0m
+  ↳ db/migrate/20190922151912_create_fixtures.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922151912"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
