@@ -2578,3 +2578,60 @@ Migrating to CreateChampionships (20190922132446)
   [1m[36mChampionship Create (0.7ms)[0m  [1m[32mINSERT INTO "championships" ("name", "level", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ligue 1"], ["level", 1], ["country", "France"], ["created_at", "2019-09-22 13:26:57.450109"], ["updated_at", "2019-09-22 13:26:57.450109"]]
   [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateSeasons (20190922140203)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateSeasons (20190922140203)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190922140203_create_seasons.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "seasons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "year" varchar, "championship_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_e268100b41"
+FOREIGN KEY ("championship_id")
+  REFERENCES "championships" ("id")
+)[0m
+  ↳ db/migrate/20190922140203_create_seasons.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_seasons_on_championship_id" ON "seasons" ("championship_id")[0m
+  ↳ db/migrate/20190922140203_create_seasons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922140203"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mChampionship Load (0.1ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "seasons"[0m
+  [1m[36mChampionship Load (0.4ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mChampionship Load (0.7ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mSeason Load (0.6ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mChampionship Load (0.4ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSeason Create (0.4ms)[0m  [1m[32mINSERT INTO "seasons" ("year", "championship_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["year", "2019-2020"], ["championship_id", 1], ["created_at", "2019-09-22 14:10:42.508184"], ["updated_at", "2019-09-22 14:10:42.508184"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mChampionship Load (0.1ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeason Load (0.2ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeason Load (0.2ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSeason Load (0.3ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" WHERE "championships"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSeason Load (0.2ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mChampionship Load (0.1ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" WHERE "championships"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" ORDER BY "championships"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
