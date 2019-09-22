@@ -2939,3 +2939,12 @@ FOREIGN KEY ("season_id")
   ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for ::1 at 2019-09-22 19:55:37 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 220ms (Views: 212.4ms | ActiveRecord: 0.0ms)
+
+
