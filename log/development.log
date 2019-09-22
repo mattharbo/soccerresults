@@ -1962,3 +1962,619 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2019-09-22 15:07:40 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 335ms (Views: 325.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:07:44 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/8" for ::1 at 2019-09-22 15:07:45 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:07:47 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams/16" for ::1 at 2019-09-22 15:07:48 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:07:50 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mStadium Load (0.5ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateStadia (20190922131630)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190922131630_create_stadia.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "stadiums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "town" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922131630_create_stadia.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922131630"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStadium Load (0.7ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "stadiums"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "stadiums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "town" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "teams"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "team_name" varchar, "acronym" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190922131630)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190921150324);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-22 13:21:16.963548"], ["updated_at", "2019-09-22 13:21:16.963548"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "stadiums"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "stadiums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "town" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "teams"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "team_name" varchar, "acronym" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190922131630)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190921150324);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-22 13:21:16.993765"], ["updated_at", "2019-09-22 13:21:16.993765"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-09-22 13:21:17.008797"], ["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Amiens SC"], ["acronym", "ASC"], ["city", "Amiens"], ["created_at", "2019-09-22 13:21:17.025955"], ["updated_at", "2019-09-22 13:21:17.025955"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "SCO Angers"], ["acronym", "SCO"], ["city", "Angers"], ["created_at", "2019-09-22 13:21:17.028692"], ["updated_at", "2019-09-22 13:21:17.028692"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "FC Girondins de Bordeaux"], ["acronym", "FCGB"], ["city", "Bordeaux"], ["created_at", "2019-09-22 13:21:17.031206"], ["updated_at", "2019-09-22 13:21:17.031206"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Stade Brestois"], ["acronym", "SB29"], ["city", "Brest"], ["created_at", "2019-09-22 13:21:17.033648"], ["updated_at", "2019-09-22 13:21:17.033648"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Dijon FCO"], ["acronym", "DFCO"], ["city", "Dijon"], ["created_at", "2019-09-22 13:21:17.037825"], ["updated_at", "2019-09-22 13:21:17.037825"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Lille OSC"], ["acronym", "LOSC"], ["city", "Lille"], ["created_at", "2019-09-22 13:21:17.042314"], ["updated_at", "2019-09-22 13:21:17.042314"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Olympique Lyonnais"], ["acronym", "OL"], ["city", "Lyon"], ["created_at", "2019-09-22 13:21:17.046860"], ["updated_at", "2019-09-22 13:21:17.046860"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Olympique de Marseille"], ["acronym", "OM"], ["city", "Marseille"], ["created_at", "2019-09-22 13:21:17.049266"], ["updated_at", "2019-09-22 13:21:17.049266"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "FC Metz"], ["acronym", "FCM"], ["city", "Metz"], ["created_at", "2019-09-22 13:21:17.051387"], ["updated_at", "2019-09-22 13:21:17.051387"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "AS Monaco FC"], ["acronym", "ASMFC"], ["city", "Monaco"], ["created_at", "2019-09-22 13:21:17.053597"], ["updated_at", "2019-09-22 13:21:17.053597"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Montpellier Hérault FC"], ["acronym", "MHFC"], ["city", "Montpellier"], ["created_at", "2019-09-22 13:21:17.055608"], ["updated_at", "2019-09-22 13:21:17.055608"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "FC Nantes Atlantique"], ["acronym", "FCNA"], ["city", "Nantes"], ["created_at", "2019-09-22 13:21:17.057710"], ["updated_at", "2019-09-22 13:21:17.057710"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "OGC Nice"], ["acronym", "OGCN"], ["city", "Nice"], ["created_at", "2019-09-22 13:21:17.060166"], ["updated_at", "2019-09-22 13:21:17.060166"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Nîmes Olympique"], ["acronym", "NO"], ["city", "Nîmes"], ["created_at", "2019-09-22 13:21:17.062813"], ["updated_at", "2019-09-22 13:21:17.062813"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Paris Saint-Germain"], ["acronym", "PSG"], ["city", "Paris"], ["created_at", "2019-09-22 13:21:17.064830"], ["updated_at", "2019-09-22 13:21:17.064830"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Stade de Reims"], ["acronym", "SdR"], ["city", "Reims"], ["created_at", "2019-09-22 13:21:17.067427"], ["updated_at", "2019-09-22 13:21:17.067427"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Stade Rennais"], ["acronym", "SR"], ["city", "Rennes"], ["created_at", "2019-09-22 13:21:17.070944"], ["updated_at", "2019-09-22 13:21:17.070944"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "AS Saint-Etienne"], ["acronym", "ASSE"], ["city", "Saint-Etienne"], ["created_at", "2019-09-22 13:21:17.073557"], ["updated_at", "2019-09-22 13:21:17.073557"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Racing Club de Strasbourg"], ["acronym", "RCS"], ["city", "Strasbourg"], ["created_at", "2019-09-22 13:21:17.075626"], ["updated_at", "2019-09-22 13:21:17.075626"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Toulouse FC"], ["acronym", "TFC"], ["city", "Toulouse"], ["created_at", "2019-09-22 13:21:17.077761"], ["updated_at", "2019-09-22 13:21:17.077761"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+Started GET "/teams" for ::1 at 2019-09-22 15:21:33 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:21:35 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/teams" for ::1 at 2019-09-22 15:22:15 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:22:16 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:22:17 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:22:17 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:22:17 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:22:17 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:22:17 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (2.5ms)
+Started GET "/teams" for ::1 at 2019-09-22 15:22:17 +0200
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: teams: SELECT "teams".* FROM "teams"):
+     6: <h2>List of all the teams:</h2>
+     7: 
+     8: <ul>
+     9:   <% @teams.each do |team| %>
+    10:     <li>
+    11:       <%= link_to team.team_name, team_path(team.id) %>
+    12:     </li>
+  
+app/views/teams/index.html.erb:9:in `_app_views_teams_index_html_erb___3803206920284640847_70109141717440'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateTeams (20190921150324)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "team_name" varchar, "acronym" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190921150324_create_teams.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190921150324"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-22 13:22:47.387486"], ["updated_at", "2019-09-22 13:22:47.387486"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Amiens SC"], ["acronym", "ASC"], ["city", "Amiens"], ["created_at", "2019-09-22 13:22:55.166097"], ["updated_at", "2019-09-22 13:22:55.166097"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (1.0ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "SCO Angers"], ["acronym", "SCO"], ["city", "Angers"], ["created_at", "2019-09-22 13:22:55.173772"], ["updated_at", "2019-09-22 13:22:55.173772"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "FC Girondins de Bordeaux"], ["acronym", "FCGB"], ["city", "Bordeaux"], ["created_at", "2019-09-22 13:22:55.178818"], ["updated_at", "2019-09-22 13:22:55.178818"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Stade Brestois"], ["acronym", "SB29"], ["city", "Brest"], ["created_at", "2019-09-22 13:22:55.182313"], ["updated_at", "2019-09-22 13:22:55.182313"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Dijon FCO"], ["acronym", "DFCO"], ["city", "Dijon"], ["created_at", "2019-09-22 13:22:55.184839"], ["updated_at", "2019-09-22 13:22:55.184839"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Lille OSC"], ["acronym", "LOSC"], ["city", "Lille"], ["created_at", "2019-09-22 13:22:55.187821"], ["updated_at", "2019-09-22 13:22:55.187821"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Olympique Lyonnais"], ["acronym", "OL"], ["city", "Lyon"], ["created_at", "2019-09-22 13:22:55.194331"], ["updated_at", "2019-09-22 13:22:55.194331"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Olympique de Marseille"], ["acronym", "OM"], ["city", "Marseille"], ["created_at", "2019-09-22 13:22:55.200366"], ["updated_at", "2019-09-22 13:22:55.200366"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "FC Metz"], ["acronym", "FCM"], ["city", "Metz"], ["created_at", "2019-09-22 13:22:55.204925"], ["updated_at", "2019-09-22 13:22:55.204925"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "AS Monaco FC"], ["acronym", "ASMFC"], ["city", "Monaco"], ["created_at", "2019-09-22 13:22:55.207283"], ["updated_at", "2019-09-22 13:22:55.207283"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Montpellier Hérault FC"], ["acronym", "MHFC"], ["city", "Montpellier"], ["created_at", "2019-09-22 13:22:55.209811"], ["updated_at", "2019-09-22 13:22:55.209811"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "FC Nantes Atlantique"], ["acronym", "FCNA"], ["city", "Nantes"], ["created_at", "2019-09-22 13:22:55.211990"], ["updated_at", "2019-09-22 13:22:55.211990"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "OGC Nice"], ["acronym", "OGCN"], ["city", "Nice"], ["created_at", "2019-09-22 13:22:55.214177"], ["updated_at", "2019-09-22 13:22:55.214177"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Nîmes Olympique"], ["acronym", "NO"], ["city", "Nîmes"], ["created_at", "2019-09-22 13:22:55.216518"], ["updated_at", "2019-09-22 13:22:55.216518"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Paris Saint-Germain"], ["acronym", "PSG"], ["city", "Paris"], ["created_at", "2019-09-22 13:22:55.219224"], ["updated_at", "2019-09-22 13:22:55.219224"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Stade de Reims"], ["acronym", "SdR"], ["city", "Reims"], ["created_at", "2019-09-22 13:22:55.222370"], ["updated_at", "2019-09-22 13:22:55.222370"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Stade Rennais"], ["acronym", "SR"], ["city", "Rennes"], ["created_at", "2019-09-22 13:22:55.226180"], ["updated_at", "2019-09-22 13:22:55.226180"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "AS Saint-Etienne"], ["acronym", "ASSE"], ["city", "Saint-Etienne"], ["created_at", "2019-09-22 13:22:55.229360"], ["updated_at", "2019-09-22 13:22:55.229360"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Racing Club de Strasbourg"], ["acronym", "RCS"], ["city", "Strasbourg"], ["created_at", "2019-09-22 13:22:55.231289"], ["updated_at", "2019-09-22 13:22:55.231289"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "acronym", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_name", "Toulouse FC"], ["acronym", "TFC"], ["city", "Toulouse"], ["created_at", "2019-09-22 13:22:55.233954"], ["updated_at", "2019-09-22 13:22:55.233954"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:113
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/teams" for ::1 at 2019-09-22 15:23:03 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/12" for ::1 at 2019-09-22 15:23:06 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  Rendered teams/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-22 15:23:07 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:9
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mChampionship Load (0.7ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateChampionships (20190922132446)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190922132446_create_championships.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "championships" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "level" integer, "country" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922132446_create_championships.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922132446"]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mChampionship Load (0.7ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChampionship Create (0.7ms)[0m  [1m[32mINSERT INTO "championships" ("name", "level", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ligue 1"], ["level", 1], ["country", "France"], ["created_at", "2019-09-22 13:26:57.450109"], ["updated_at", "2019-09-22 13:26:57.450109"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mChampionship Load (0.2ms)[0m  [1m[34mSELECT  "championships".* FROM "championships" LIMIT ?[0m  [["LIMIT", 11]]
