@@ -23,3 +23,9 @@ end
 # psgrennes.date = "2019_08_18"
 # psgrennes.final_score = "2-1"
 # psgrennes.stage = 2
+
+# psgrennes = Fixture.create(home_team: Team.where(city:"Lyon")[0], away_team: Team.where(city:"Paris")[0], stadium: Stadium.where(town:"Lyon")[0], season: Season.last)
+# psgrennes.status = "done"
+# psgrennes.date = "2019_09_23"
+# psgrennes.final_score = "0-1"
+# psgrennes.stage = 6

@@ -3,7 +3,21 @@
   <%= link_to "Back to list", teams_path %>
 </p>
 
-<h1><%= @team[:name] %></h1>
+<h1><%= @team[:team_name] %> (<%= @team[:acronym] %>)</h1>
 <h3><%= @team[:city] %></h3>
 
-(<%= @team[:acronym] %>)
+<% if (@team_fixtures.count != 0) %>
+  <h4>Latest results:</h4>
+  <ul>
+    <% @team_fixtures.each do |fixture| %>
+      <li>
+        <%= fixture.home_team.team_name %>
+        <%= fixture.final_score %>
+        <%= fixture.away_team.team_name %>
+        <%= fixture.date %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <i>There is no game for this team in the database</i>
+<% end %>
