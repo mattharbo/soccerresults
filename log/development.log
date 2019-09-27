@@ -9622,3 +9622,1441 @@ Processing by TeamsController#show as HTML
 Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 1.2ms)
 
 
+  [1m[36mTeam Load (3.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE 'Nantes') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (city LIKE 'Nantes') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (city LIKE 'Paris Saint Germain') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (city LIKE '%Paris Saint Germain%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Paris Saint Germain%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Saint Etienne%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Reims%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Nimes%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Dijon%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Etienne%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Marseille%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Nimes%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Nîmes%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE (team_name LIKE '%Brest%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (5.9ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games/2019-09-20" for ::1 at 2019-09-27 21:25:48 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-09-20"}
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nantes"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mStadium Load (0.6ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mSeason Load (0.5ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mFixture Create (2.7ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 19], ["away_team_id", 12], ["stadium_id", 19], ["season_id", 1], ["created_at", "2019-09-27 19:25:49.023593"], ["updated_at", "2019-09-27 19:25:49.023593"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:50
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 620ms (Views: 282.3ms | ActiveRecord: 8.2ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games/2019-09-20" for ::1 at 2019-09-27 21:26:26 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-09-20"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nantes"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:50
+  [1m[36mFixture Create (0.4ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 19], ["away_team_id", 12], ["stadium_id", 19], ["season_id", 1], ["created_at", "2019-09-27 19:26:27.278068"], ["updated_at", "2019-09-27 19:26:27.278068"]]
+  ↳ app/controllers/games_controller.rb:50
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:54
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Match Finished"], ["final_score", "2-1"], ["stage", 6], ["updated_at", "2019-09-27 19:26:27.286608"], ["id", 7]]
+  ↳ app/controllers/games_controller.rb:54
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:54
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 330ms (Views: 34.0ms | ActiveRecord: 12.5ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games/2019-09-20" for ::1 at 2019-09-27 21:38:57 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-09-20"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nantes"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.6ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 19], ["away_team_id", 12], ["stadium_id", 19], ["season_id", 1], ["created_at", "2019-09-27 19:38:57.755674"], ["updated_at", "2019-09-27 19:38:57.755674"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "time" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-09-20"], ["time", "2000-01-01 18:45:00"], ["final_score", "2-1"], ["stage", 6], ["updated_at", "2019-09-27 19:38:57.761170"], ["id", 8]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 396ms (Views: 65.0ms | ActiveRecord: 5.9ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFixture Destroy (8.1ms)[0m  [1m[31mDELETE FROM "fixtures"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+Started GET "/games/2019-09-20" for ::1 at 2019-09-27 21:47:57 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-09-20"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nantes"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (1.3ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 19], ["away_team_id", 12], ["stadium_id", 19], ["season_id", 1], ["created_at", "2019-09-27 19:47:57.629348"], ["updated_at", "2019-09-27 19:47:57.629348"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-09-20"], ["final_score", "2-1"], ["stage", 6], ["updated_at", "2019-09-27 19:47:57.635607"], ["id", 9]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 429ms (Views: 59.8ms | ActiveRecord: 11.4ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFixture Destroy (9.5ms)[0m  [1m[31mDELETE FROM "fixtures"[0m
+Started GET "/games/2019-08-09" for ::1 at 2019-09-27 21:49:30 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-08-09"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Monaco"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Lyon"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Monaco"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 10], ["away_team_id", 7], ["stadium_id", 10], ["season_id", 1], ["created_at", "2019-09-27 19:49:31.151051"], ["updated_at", "2019-09-27 19:49:31.151051"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.3ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-09"], ["final_score", "0-3"], ["stage", 1], ["updated_at", "2019-09-27 19:49:31.156761"], ["id", 10]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 313ms (Views: 37.8ms | ActiveRecord: 5.3ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.8ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games/2019-08-09" for ::1 at 2019-09-27 21:49:59 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-08-09"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Monaco"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Lyon"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Monaco"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 10], ["away_team_id", 7], ["stadium_id", 10], ["season_id", 1], ["created_at", "2019-09-27 19:49:59.261893"], ["updated_at", "2019-09-27 19:49:59.261893"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.4ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-09"], ["final_score", "0-3"], ["stage", 1], ["updated_at", "2019-09-27 19:49:59.271114"], ["id", 11]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 269ms (Views: 32.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/games/2019-08-10" for ::1 at 2019-09-27 21:50:01 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-08-10"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Marseille"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Reims"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Marseille"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.6ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 8], ["away_team_id", 16], ["stadium_id", 8], ["season_id", 1], ["created_at", "2019-09-27 19:50:01.463918"], ["updated_at", "2019-09-27 19:50:01.463918"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.3ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "0-2"], ["stage", 1], ["updated_at", "2019-09-27 19:50:01.469557"], ["id", 12]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Dijon"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Etienne"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Dijon"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.2ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nice"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Amiens"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Nice"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 13], ["away_team_id", 1], ["stadium_id", 13], ["season_id", 1], ["created_at", "2019-09-27 19:50:01.780450"], ["updated_at", "2019-09-27 19:50:01.780450"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "2-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:01.788949"], ["id", 13]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Montpellier"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Rennes"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Montpellier"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.6ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 11], ["away_team_id", 17], ["stadium_id", 11], ["season_id", 1], ["created_at", "2019-09-27 19:50:01.925738"], ["updated_at", "2019-09-27 19:50:01.925738"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "0-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:01.935044"], ["id", 14]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Angers"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Bordeaux"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Angers"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 2], ["away_team_id", 3], ["stadium_id", 2], ["season_id", 1], ["created_at", "2019-09-27 19:50:02.063056"], ["updated_at", "2019-09-27 19:50:02.063056"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.4ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "3-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:02.071854"], ["id", 15]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Brest"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Toulouse"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Brest"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 4], ["away_team_id", 20], ["stadium_id", 4], ["season_id", 1], ["created_at", "2019-09-27 19:50:02.222171"], ["updated_at", "2019-09-27 19:50:02.222171"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "1-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:02.230798"], ["id", 16]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1028ms (Views: 32.6ms | ActiveRecord: 42.1ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.7ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" ORDER BY "fixtures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games/2019-08-10" for ::1 at 2019-09-27 21:50:26 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-08-10"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Marseille"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Reims"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.3ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Marseille"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.2ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.8ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 8], ["away_team_id", 16], ["stadium_id", 8], ["season_id", 1], ["created_at", "2019-09-27 19:50:26.460201"], ["updated_at", "2019-09-27 19:50:26.460201"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "0-2"], ["stage", 1], ["updated_at", "2019-09-27 19:50:26.465005"], ["id", 17]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Dijon"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Etienne"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.2ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Dijon"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nice"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Amiens"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Nice"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 13], ["away_team_id", 1], ["stadium_id", 13], ["season_id", 1], ["created_at", "2019-09-27 19:50:26.737822"], ["updated_at", "2019-09-27 19:50:26.737822"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.4ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "2-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:26.747049"], ["id", 18]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+Started GET "/games/2019-08-11" for ::1 at 2019-09-27 21:50:26 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2019-08-11"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Montpellier"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Rennes"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Montpellier"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 11], ["away_team_id", 17], ["stadium_id", 11], ["season_id", 1], ["created_at", "2019-09-27 19:50:26.870787"], ["updated_at", "2019-09-27 19:50:26.870787"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.5ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "0-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:26.875374"], ["id", 19]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Angers"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Bordeaux"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Angers"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 2], ["away_team_id", 3], ["stadium_id", 2], ["season_id", 1], ["created_at", "2019-09-27 19:50:26.994348"], ["updated_at", "2019-09-27 19:50:26.994348"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.3ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "3-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:27.003519"], ["id", 20]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Lille"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nantes"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Lille"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.4ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 6], ["away_team_id", 12], ["stadium_id", 6], ["season_id", 1], ["created_at", "2019-09-27 19:50:27.076692"], ["updated_at", "2019-09-27 19:50:27.076692"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.4ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-11"], ["final_score", "2-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:27.081599"], ["id", 21]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Brest"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Toulouse"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Brest"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.4ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 4], ["away_team_id", 20], ["stadium_id", 4], ["season_id", 1], ["created_at", "2019-09-27 19:50:27.132775"], ["updated_at", "2019-09-27 19:50:27.132775"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.3ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-10"], ["final_score", "1-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:27.142226"], ["id", 22]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 927ms (Views: 23.9ms | ActiveRecord: 31.0ms)
+
+
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Metz"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Strasbourg"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 19], ["away_team_id", 9], ["stadium_id", 19], ["season_id", 1], ["created_at", "2019-09-27 19:50:27.202884"], ["updated_at", "2019-09-27 19:50:27.202884"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.4ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-11"], ["final_score", "1-1"], ["stage", 1], ["updated_at", "2019-09-27 19:50:27.208054"], ["id", 23]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Paris"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."city" = ?[0m  [["city", "Nîmes"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT "stadia".* FROM "stadia" WHERE "stadia"."town" = ?[0m  [["town", "Paris"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mSeason Load (0.1ms)[0m  [1m[34mSELECT  "seasons".* FROM "seasons" ORDER BY "seasons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[36mFixture Create (0.5ms)[0m  [1m[32mINSERT INTO "fixtures" ("home_team_id", "away_team_id", "stadium_id", "season_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["home_team_id", 15], ["away_team_id", 14], ["stadium_id", 15], ["season_id", 1], ["created_at", "2019-09-27 19:50:27.340723"], ["updated_at", "2019-09-27 19:50:27.340723"]]
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:51
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  [1m[36mFixture Update (0.4ms)[0m  [1m[33mUPDATE "fixtures" SET "status" = ?, "date" = ?, "final_score" = ?, "stage" = ?, "updated_at" = ? WHERE "fixtures"."id" = ?[0m  [["status", "Finished"], ["date", "2019-08-11"], ["final_score", "3-0"], ["stage", 1], ["updated_at", "2019-09-27 19:50:27.345880"], ["id", 24]]
+  ↳ app/controllers/games_controller.rb:57
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:57
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 530ms (Views: 32.4ms | ActiveRecord: 13.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures"[0m
+  [1m[36mFixture Load (0.6ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 11]]
+  [1m[36mFixture Load (1.9ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."fixture_id" = ? LIMIT ?[0m  [["fixture_id", 3], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.8ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."fixture_id" = ? LIMIT ?[0m  [["fixture_id", 10], ["LIMIT", 11]]
+  [1m[36mFixture Load (1.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."Fixture id" = ? LIMIT ?[0m  [["Fixture id", 10], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.5ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 10], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 19], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 18], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 17], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 16], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 15], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."ID" = ? LIMIT ?[0m  [["ID", 14], ["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-09-27 21:54:42 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-27 21:54:42 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-27 21:54:44 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fixtures" for ::1 at 2019-09-27 21:54:46 +0200
+Processing by FixturesController#index as HTML
+  Rendering fixtures/index.html.erb within layouts/application
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures"[0m
+  ↳ app/views/fixtures/index.html.erb:6
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.5ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mCACHE Stadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.2ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:21
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:25
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:26
+  Rendered fixtures/index.html.erb within layouts/application (68.8ms)
+Completed 200 OK in 119ms (Views: 106.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/fixtures" for ::1 at 2019-09-27 21:57:59 +0200
+Processing by FixturesController#index as HTML
+  Rendering fixtures/index.html.erb within layouts/application
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures"[0m
+  ↳ app/views/fixtures/index.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  Rendered fixtures/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fixtures/17" for ::1 at 2019-09-27 21:58:40 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mFixture Load (1.0ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 21.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fixtures/18" for ::1 at 2019-09-27 21:58:46 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fixtures/24" for ::1 at 2019-09-27 21:59:35 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fixtures/16" for ::1 at 2019-09-27 22:04:08 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fixtures/14" for ::1 at 2019-09-27 22:04:11 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fixtures/20" for ::1 at 2019-09-27 22:04:18 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-27 22:04:35 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-27 22:04:37 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams/7" for ::1 at 2019-09-27 22:04:39 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 7], ["away_team_id", 7]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.9ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 7], ["away_team_id", 7]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 43ms (Views: 32.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/teams/14" for ::1 at 2019-09-27 22:04:45 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 14], ["away_team_id", 14]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 14], ["away_team_id", 14]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 49ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams/11" for ::1 at 2019-09-27 22:04:50 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 11], ["away_team_id", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 11], ["away_team_id", 11]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/18" for ::1 at 2019-09-27 22:04:57 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 18], ["away_team_id", 18]]
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams/19" for ::1 at 2019-09-27 22:05:00 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 19], ["away_team_id", 19]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 19], ["away_team_id", 19]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 34ms (Views: 26.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/20" for ::1 at 2019-09-27 22:05:02 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 20], ["away_team_id", 20]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 20], ["away_team_id", 20]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 41ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams/17" for ::1 at 2019-09-27 22:05:06 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 17], ["away_team_id", 17]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.4ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 17], ["away_team_id", 17]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 35ms (Views: 29.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teams/16" for ::1 at 2019-09-27 22:05:08 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 16], ["away_team_id", 16]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 16], ["away_team_id", 16]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 42ms (Views: 32.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/fixtures" for ::1 at 2019-09-27 22:05:11 +0200
+Processing by FixturesController#index as HTML
+  Rendering fixtures/index.html.erb within layouts/application
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures"[0m
+  ↳ app/views/fixtures/index.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  Rendered fixtures/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-27 22:05:30 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams/6" for ::1 at 2019-09-27 22:05:32 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 6], ["away_team_id", 6]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 6], ["away_team_id", 6]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams/5" for ::1 at 2019-09-27 22:05:34 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 5], ["away_team_id", 5]]
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams/4" for ::1 at 2019-09-27 22:05:50 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 4], ["away_team_id", 4]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 4], ["away_team_id", 4]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams/3" for ::1 at 2019-09-27 22:06:01 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 3], ["away_team_id", 3]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.7ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 3], ["away_team_id", 3]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 41ms (Views: 32.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams/2" for ::1 at 2019-09-27 22:06:06 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 2], ["away_team_id", 2]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 2], ["away_team_id", 2]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (2.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 38ms (Views: 28.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/teams/1" for ::1 at 2019-09-27 22:06:09 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 1], ["away_team_id", 1]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 1], ["away_team_id", 1]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/9" for ::1 at 2019-09-27 22:06:11 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 9], ["away_team_id", 9]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 9], ["away_team_id", 9]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 28.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/teams/11" for ::1 at 2019-09-27 22:06:55 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 11], ["away_team_id", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 11], ["away_team_id", 11]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 27.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-09-27 22:07:04 +0200
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:8
+  Rendered teams/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams/12" for ::1 at 2019-09-27 22:07:06 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 12], ["away_team_id", 12]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 12], ["away_team_id", 12]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams/13" for ::1 at 2019-09-27 22:07:09 +0200
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 13], ["away_team_id", 13]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mFixture Load (0.6ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures" WHERE ("fixtures"."home_team_id" = ? OR "fixtures"."away_team_id" = ?)[0m  [["home_team_id", 13], ["away_team_id", 13]]
+  ↳ app/views/teams/show.html.erb:12
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:14
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:16
+  Rendered teams/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-09-27 22:07:18 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fixtures" for ::1 at 2019-09-27 22:07:19 +0200
+Processing by FixturesController#index as HTML
+  Rendering fixtures/index.html.erb within layouts/application
+  [1m[36mFixture Load (1.2ms)[0m  [1m[34mSELECT "fixtures".* FROM "fixtures"[0m
+  ↳ app/views/fixtures/index.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mCACHE Stadium Load (0.0ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:7
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:11
+  [1m[36mStadium Load (0.1ms)[0m  [1m[34mSELECT  "stadia".* FROM "stadia" WHERE "stadia"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/fixtures/index.html.erb:12
+  Rendered fixtures/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 59ms (Views: 48.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fixtures/22" for ::1 at 2019-09-27 22:07:22 +0200
+Processing by FixturesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/fixtures_controller.rb:8
+  Rendering fixtures/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:3
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/fixtures/show.html.erb:5
+  Rendered fixtures/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+

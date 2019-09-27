@@ -1,23 +1,9 @@
 <h1>Fixtures#index</h1>
 
-<% fixindex = 0 %>
-<% displayed = false %>
-
 <% @fixtures.each do |fixture| %>
 
-  <% if fixindex = fixture.stage && displayed == false %>
-
-    <br><b>Stage <%= fixture.stage %>:</b><br><br>
-    <% displayed = true %>
-
-  <% else %>
-
-    <% fixindex =+ 1 %>
-    <% displayed = false %>
-
-  <% end %>
-
   <li>
+    <b>Stage <%= fixture.stage %>:</b>
     <%= fixture.home_team.acronym %>
     <b>
       <%= fixture.final_score %>
@@ -27,6 +13,5 @@
      -
     <%= link_to "Voir plus", fixture_path(fixture.id) %>
   </li>
-  <%= fixindex %>
 
 <% end %>
