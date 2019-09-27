@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    @team_fixtures = Fixture.where(home_team:params[:id]).or(Fixture.where(away_team:params[:id]))
   end
 
   def new

@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @fixtures = Fixture.all
   end
 
 end

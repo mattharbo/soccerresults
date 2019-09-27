@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  date: 2019-09-22
+  time: 2019-09-22 17:19:12
+  team: one
+  team: one
+  final_score: MyString
+  stadium: one
+  season: one
+  stage: 1
+
+two:
+  status: MyString
+  date: 2019-09-22
+  time: 2019-09-22 17:19:12
+  team: two
+  team: two
+  final_score: MyString
+  stadium: two
+  season: two
+  stage: 1
