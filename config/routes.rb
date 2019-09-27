@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :teams
   resources :fixtures, only: [:index, :show, :new, :create, :edit, :update]
+  resources :games, only: [:show]
   # -------
   # Is totaly equal to:
   # get 'teams', to:'teams#index', as: :teams
