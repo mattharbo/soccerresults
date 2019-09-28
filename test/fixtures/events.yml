@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fixture: one
+  event_type: one
+  minute: 1
+  player: one
+  team: one
+  other_player: one
+
+two:
+  fixture: two
+  event_type: two
+  minute: 1
+  player: two
+  team: two
+  other_player: two

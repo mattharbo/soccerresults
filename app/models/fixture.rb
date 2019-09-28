@@ -4,6 +4,7 @@ class Fixture < ApplicationRecord
   belongs_to :stadium
   belongs_to :season
   has_many :reports
+  has_many :events
 end
 
 
