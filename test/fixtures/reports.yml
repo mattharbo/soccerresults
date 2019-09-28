@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: one
+  fixture: one
+  possession: 1
+  tot_shoot: 1
+  on_target_shoot: 1
+  offside: 1
+
+two:
+  team: two
+  fixture: two
+  possession: 1
+  tot_shoot: 1
+  on_target_shoot: 1
+  offside: 1

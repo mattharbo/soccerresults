@@ -3,6 +3,7 @@ class Fixture < ApplicationRecord
   belongs_to :away_team, :class_name => 'Team'
   belongs_to :stadium
   belongs_to :season
+  has_many :reports
 end
 
 
