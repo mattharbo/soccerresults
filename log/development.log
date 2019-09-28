@@ -12779,3 +12779,52 @@ FOREIGN KEY ("fixture_id")
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/matthieuharbonnier/.rbenv/versions/2.5.1/bin/rake:23
   [1m[36mReport Load (0.7ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.6ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFixture Load (0.2ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mFixture Load (1.4ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."team" = ? LIMIT ?[0m  [["team", 3], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.8ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."team_id" = ? LIMIT ?[0m  [["team_id", 3], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.4ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."home_team_id" = ? LIMIT ?[0m  [["home_team_id", 3], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.4ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."away_team_id" = ? LIMIT ?[0m  [["away_team_id", 3], ["LIMIT", 11]]
+  [1m[36mFixture Load (0.3ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFixture Load (1.7ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReport Create (3.3ms)[0m  [1m[32mINSERT INTO "reports" ("team_id", "fixture_id", "possession", "tot_shoot", "on_target_shoot", "offside", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 2], ["fixture_id", 58], ["possession", 40], ["tot_shoot", 12], ["on_target_shoot", 5], ["offside", 3], ["created_at", "2019-09-28 11:27:34.746439"], ["updated_at", "2019-09-28 11:27:34.746439"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports"[0m
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReport Create (0.4ms)[0m  [1m[32mINSERT INTO "reports" ("team_id", "fixture_id", "possession", "tot_shoot", "on_target_shoot", "offside", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 3], ["fixture_id", 58], ["possession", 60], ["tot_shoot", 23], ["on_target_shoot", 12], ["offside", 3], ["created_at", "2019-09-28 11:29:56.866290"], ["updated_at", "2019-09-28 11:29:56.866290"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.4ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReport Create (0.4ms)[0m  [1m[32mINSERT INTO "reports" ("team_id", "fixture_id", "possession", "tot_shoot", "on_target_shoot", "offside", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 15], ["fixture_id", 57], ["possession", 65], ["tot_shoot", 6], ["on_target_shoot", 2], ["offside", 4], ["created_at", "2019-09-28 11:29:56.882484"], ["updated_at", "2019-09-28 11:29:56.882484"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.6ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReport Create (0.8ms)[0m  [1m[32mINSERT INTO "reports" ("team_id", "fixture_id", "possession", "tot_shoot", "on_target_shoot", "offside", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 14], ["fixture_id", 57], ["possession", 35], ["tot_shoot", 3], ["on_target_shoot", 2], ["offside", 5], ["created_at", "2019-09-28 11:29:56.891242"], ["updated_at", "2019-09-28 11:29:56.891242"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReport Create (0.5ms)[0m  [1m[32mINSERT INTO "reports" ("team_id", "fixture_id", "possession", "tot_shoot", "on_target_shoot", "offside", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 11], ["fixture_id", 56], ["possession", 32], ["tot_shoot", 3], ["on_target_shoot", 1], ["offside", 3], ["created_at", "2019-09-28 11:29:56.901093"], ["updated_at", "2019-09-28 11:29:56.901093"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mFixture Load (0.1ms)[0m  [1m[34mSELECT  "fixtures".* FROM "fixtures" WHERE "fixtures"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReport Create (0.5ms)[0m  [1m[32mINSERT INTO "reports" ("team_id", "fixture_id", "possession", "tot_shoot", "on_target_shoot", "offside", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["team_id", 17], ["fixture_id", 56], ["possession", 68], ["tot_shoot", 17], ["on_target_shoot", 10], ["offside", 6], ["created_at", "2019-09-28 11:29:58.449298"], ["updated_at", "2019-09-28 11:29:58.449298"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mReport Load (5.6ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."fixture_id" = ? AND "reports"."team_id" = ? LIMIT ?[0m  [["fixture_id", 58], ["team_id", 2], ["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."fixture_id" = ? AND "reports"."team_id" = ? LIMIT ?[0m  [["fixture_id", 54], ["team_id", 2], ["LIMIT", 11]]
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."fixture_id" = ? AND "reports"."team_id" = ? LIMIT ?[0m  [["fixture_id", 58], ["team_id", 2], ["LIMIT", 11]]
