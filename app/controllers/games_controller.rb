@@ -56,6 +56,8 @@ class GamesController < ApplicationController
         # newgame.time = Time.parse(fix_events_hash["event_date"]).strftime("%H:%M") # ==> NOT WORKING!
         newgame.save
 
+        games_array = []
+
         # # Not sure it's needed
         # fix_events_hash["fixture_id"]
         # fix_events_hash["homeTeam"]["logo"]
