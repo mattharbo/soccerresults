@@ -219,3 +219,10 @@ FRENCHSTADIA = {
 # FRENCHSTADIA.each do |id, stadium|
 #   Stadium.create(name: stadium[:name], town: stadium[:city], capacity: stadium[:capacity])
 # end
+
+# Report.create(team: Team.find(2), fixture: Fixture.find(58),possession:40,tot_shoot:12,on_target_shoot:5,offside:3)
+# Report.create(team: Team.find(3), fixture: Fixture.find(58),possession:60,tot_shoot:23,on_target_shoot:12,offside:3)
+# Report.create(team: Team.find(15), fixture: Fixture.find(57),possession:65,tot_shoot:6,on_target_shoot:2,offside:4)
+# Report.create(team: Team.find(14), fixture: Fixture.find(57),possession:35,tot_shoot:3,on_target_shoot:2,offside:5)
+# Report.create(team: Team.find(11), fixture: Fixture.find(56),possession:32,tot_shoot:3,on_target_shoot:1,offside:3)
+# Report.create(team: Team.find(17), fixture: Fixture.find(56),possession:68,tot_shoot:17,on_target_shoot:10,offside:6)

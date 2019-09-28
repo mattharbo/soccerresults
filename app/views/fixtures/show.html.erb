@@ -5,3 +5,21 @@
   <%= @fixture.away_team.team_name %>
 </h1>
 </center>
+
+<% if @home_report && @away_report != nil %>
+
+  Home Possession: <%= @home_report.possession %>%<br>
+  Total shoots: <%= @home_report.tot_shoot %><br>
+  Total shoots on target: <%= @home_report.on_target_shoot %><br>
+  Offsides: <%= @home_report.offside %><br>
+  <br><br>
+  Home Possession: <%= @away_report.possession %>%<br>
+  Total shoots: <%= @away_report.tot_shoot %><br>
+  Total shoots on target: <%= @away_report.on_target_shoot %><br>
+  Offsides: <%= @away_report.offside %><br>
+
+<% else %>
+
+  <i>No stats available for this game</i>
+
+<% end %>
